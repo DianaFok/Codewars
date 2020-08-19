@@ -11,6 +11,6 @@
 //
 // 5, 10, 2  -->  17
 
-function goals (laLigaGoals, copaDelReyGoals, championsLeagueGoals) {
-  // code goes here
+const goals = (a, b, c) => a + b + c; {
+
 }
