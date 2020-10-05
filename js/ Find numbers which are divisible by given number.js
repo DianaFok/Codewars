@@ -4,3 +4,5 @@
 function divisibleBy(numbers, divisor){
   return numbers.filter(num => num % divisor === 0);
 }
+
+// The filter() method creates a new array with all elements that pass the test implemented by the provided function.
