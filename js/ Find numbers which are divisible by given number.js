@@ -2,5 +2,5 @@
 // First argument is an array of numbers and the second is the divisor.
 
 function divisibleBy(numbers, divisor){
-return [...numbers].filter(num=>num%divisor===0);
+  return numbers.filter(num => num % divisor === 0);
 }
