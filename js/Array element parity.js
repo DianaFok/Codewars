@@ -16,11 +16,13 @@
 // (the only-positive or only-negative integer may appear more than once)
 
 function solve(arr){
-  return arr.filter(a=>arr.indexOf(-a)===-1)[0];
-};
+  for(let i = 0; i < arr.length; i++) {
+    if(arr.indexOf(arr[i] * -1) === -1) {
+      return arr[i];
+    }
+  }
 
-function solve (arr) {
-  return arr.filter(a=>arr.indexOf(-a)===-1) [0];
-}
+  return -1;
+};
 
 // The indexOf() method searches the array for the specified item, and returns its position.

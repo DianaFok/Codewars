@@ -16,4 +16,14 @@
 // [ "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" ]     -->  10
 // [ "1", "2", "3", "4", "5", "6", "10", "11", "12", "13" ]  -->   7
 
-let baseFinder = seq => new Set(seq.join("")).size;
+function baseFinder(seq){
+  let arr = [];
+  let string = seq.toString().split('');
+  for (i = 0; i < string.length; i++) {
+    if (arr.includes(string[i]) == false) {
+        arr.push(string[i]);
+    }
+  }
+  let commaRemoved = arr.join('').replace(/,/g, "");
+  return commaRemoved.length;
+}
