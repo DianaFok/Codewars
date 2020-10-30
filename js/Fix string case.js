@@ -22,3 +22,28 @@ function solve(s){
     }
     return lowerC >= upperC ? s.toLowerCase() : s.toUpperCase()
 }
+
+//? = if/else statement
+//return lowerC greater than = to if upperC
+
+function solve(s){
+  //string -> array
+ let array = s.split('')
+  //filter by upperCase
+ let upperCaseArray = array.filter(letter => letter === letter.toUpperCase())
+ //filter by lowerCase
+ let lowerCaseArray = array.filter(letter => letter === letter.toLowerCase())
+ console.log(upperCaseArray,lowerCaseArray)
+  //if (array has more upperCase).join()
+        //string.toUpperCase
+  //if (String has more lowerCase)
+        //string.toLowerCase
+  if(upperCaseArray.length !== lowerCaseArray.length && upperCaseArray.length > lowerCaseArray.length){
+    return array.join('').toUpperCase()
+  } else {
+    return array.join('').toLowerCase()
+  }
+}
+
+const upper = s.split('').filter(item=> item === item.toUpperCase() ).length;
+return (upper > s.length/2) ? s.toUpperCase() : s.toLowerCase()
